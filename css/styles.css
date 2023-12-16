@@ -3,7 +3,7 @@
 }
 body {
   background: #fff;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 a {
@@ -426,13 +426,13 @@ main {
    margin-bottom: 15px;
   }
   .members_text {
-    display: flex;
     margin-right: auto;
   }
   .members_text p,
   .members_text a {
     align-self: flex-start;
     padding-left: 10px;
+    text-align: justify;
   }
 
   .members_container {
