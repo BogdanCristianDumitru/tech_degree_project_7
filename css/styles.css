@@ -83,6 +83,24 @@ nav {
  .headline {
     margin: 15px 15px 0 15px;
  }
+ .alert-banner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #6261BD;
+  color: #fff;
+  margin: 20px auto 0;
+  width: 95%;
+  border-radius: 5px;
+ }
+ .alert-banner p {
+  display: inline-block;
+ }
+ .alert-banner p:first-child {
+  padding-left: 15px;
+ }
+ .alert-banner-close {
+  padding-right: 15px;
+ }
 
   /* Sections*/
   .traffic_header {
@@ -401,7 +419,8 @@ main {
   .members,
   .recent_activity,
   .message,
-  .settings {
+  .settings,
+  .alert {
     grid-column: 1 / 3;;
   }
 
@@ -520,6 +539,9 @@ main {
   .recent_activity,
   .settings {
     grid-column: 2 / 3;
+  }
+  .alert {
+    grid-column: 1 / 3;
   }
   .message::after {
     display: none;
