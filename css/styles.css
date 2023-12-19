@@ -101,6 +101,9 @@ nav {
  .alert-banner-close {
   padding-right: 15px;
  }
+ .alert-banner-close:hover {
+  cursor: default;
+ }
 
   /* Sections*/
   .traffic_header {
@@ -146,7 +149,8 @@ nav {
   }
   .widget_container_full,
   .widget_container_half {
-    margin: 30px 10px 25px; 
+    margin: 30px auto 25px; 
+    width: 95vw;
   }
   .social_container {
     display: flex;
@@ -371,6 +375,14 @@ textarea[placeholder] {
   width: 90%;
 }
 
+.widget_container_full {
+  position: relative;
+  height: 20vh;
+}
+.widget_container_half {
+  position: relative;
+  height: 20vh;
+}
 
 /* Media Queries */
 
@@ -421,7 +433,18 @@ main {
   .message,
   .settings,
   .alert {
-    grid-column: 1 / 3;;
+    grid-column: 1 / 3;
+  }
+  .widget_container_full {
+    position: relative;
+    width: 90vw;
+    height: 40vh;
+  }
+  .widget_container_half {
+    position: relative;
+    width: 45vw;
+    height: 25vh;
+    padding: 0 15px 0;
   }
 
   .flex_social {
