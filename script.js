@@ -4,6 +4,10 @@ const trafficCanvas = document.getElementById("traffic_chart");
 const dailyCanvas = document.getElementById('daily_chart');
 const mobileCanvas = document.getElementById('doghnut_chart');
 
+const user = document.getElementById('user_field');
+const message = document.getElementById('message_field');
+const send = document.getElementById('send');
+
 
 alertBanner.innerHTML = `
     <div class="alert-banner">
@@ -47,6 +51,12 @@ let trafficOptions = {
         legend: {
         display: false
         }
+    },
+    elements: {
+        line: {
+            tension: 0.4,
+            borderJoinStyle: 'round'
+        }
     }
 };
 
@@ -58,7 +68,7 @@ trafficOptions.maintainAspectRatio = false;
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
     data: trafficData,
-    options: trafficOptions,
+    options: trafficOptions
 });
 
 /* Object literal represeting the data for the bar chart */
@@ -133,4 +143,17 @@ const mobileData = {
         type: 'doughnut',
         data: mobileData,
         options: mobileOptions
+    });
+
+    /* Message Section */
+    send.addEventListener('click', () => {
+        if(user.value === "" && message.value === "") {
+            alert('Please fill out user and message fields before sending.');
+        } else if (user.value === "") {
+            alert('Please fill out user field before sending.');
+        } else if (message.value === "") {
+            alert('Please fill out message field before sending.');
+        } else {
+            alert(`Message successfully sent to: ${user.value}`);
+        }
     });
