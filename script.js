@@ -1,3 +1,4 @@
+const bellIcon = document.getElementById('bell_icon');
 const alertBanner = document.getElementById("alert");
 
 const trafficCanvas = document.getElementById("traffic_chart");
@@ -25,6 +26,14 @@ alertBanner.addEventListener('click', e => {
         alertBanner.style.display = "none";
     }
 });
+
+/* Notifications */
+bellIcon.addEventListener('click', () => {
+    window.alert('Message 1: J.K. wants to set up a meeting with you.\nMessage 2: Jane M. left a comment on your latest Facebook post.');
+    const notification = document.getElementById('notifications');
+    notification.classList.remove('notification');
+});
+
 
 /* Objects literal represeting the data for the line chart */
 let trafficDataHourly = {

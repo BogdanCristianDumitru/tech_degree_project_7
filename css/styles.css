@@ -45,6 +45,16 @@ img {
     width: 25px;
     fill: white;
 }
+.notification {
+  background-color: lightgreen;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  position: relative;
+  left: 20px;
+  bottom: 40px;
+  
+}
 
 /* Navigation*/
 nav {
@@ -102,7 +112,7 @@ nav {
   padding-right: 15px;
  }
  .alert_banner_close:hover {
-  cursor: default;
+  cursor: pointer;
  }
 
   /* Sections*/
@@ -386,6 +396,9 @@ textarea[placeholder] {
 .noclick {
   background-color: #fff;
   border: none;
+}
+.noclick:hover {
+  cursor: pointer;
 }
 
 .clicked {
