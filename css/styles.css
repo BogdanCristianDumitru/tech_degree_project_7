@@ -45,6 +45,9 @@ img {
     width: 25px;
     fill: white;
 }
+#bell_icon:hover {
+  cursor: pointer;
+}
 .notification {
   background-color: lightgreen;
   border-radius: 50%;
