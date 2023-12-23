@@ -83,7 +83,7 @@ nav {
  .headline {
     margin: 15px 15px 0 15px;
  }
- .alert-banner {
+ .alert_banner {
   display: flex;
   justify-content: space-between;
   background-color: #6261BD;
@@ -92,16 +92,16 @@ nav {
   width: 95%;
   border-radius: 5px;
  }
- .alert-banner p {
+ .alert_banner p {
   display: inline-block;
  }
- .alert-banner p:first-child {
+ .alert_banner p:first-child {
   padding-left: 15px;
  }
- .alert-banner-close {
+ .alert_banner_close {
   padding-right: 15px;
  }
- .alert-banner-close:hover {
+ .alert_banner_close:hover {
   cursor: default;
  }
 
@@ -383,6 +383,18 @@ textarea[placeholder] {
   position: relative;
   height: 20vh;
 }
+.noclick {
+  background-color: #fff;
+  border: none;
+}
+
+.clicked {
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: #79B987;
+  color: #fff;
+  border: none;
+} 
 
 /* Media Queries */
 

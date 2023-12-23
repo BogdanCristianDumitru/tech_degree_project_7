@@ -70,11 +70,12 @@
                 <div class="traffic_header">
                     <h3>Traffic</h3>
                     <ul class="traffic_nav">
-                        <li class="traffic_nav_link">Hourly</li>
-                        <li class="traffic_nav_link">Daily</li>
-                        <li class="traffic_nav_link">Weekly </li>
-                        <li class="traffic_nav_link">Monthly</li>
+                        <li class="traffic_nav_link"><button class="noclick" id="default_button" onclick="updateChart('hourly')">Hourly</button></li>
+                        <li class="traffic_nav_link"><button class="noclick" onclick="updateChart('daily')">Daily</button></li>
+                        <li class="traffic_nav_link"><button class="noclick" onclick="updateChart('weekly')">Weekly</button></li>
+                        <li class="traffic_nav_link"><button class="noclick" onclick="updateChart('monthly')">Monthly</button></li>
                     </ul>
+                    
                 </div>
                 <div class="widget_container_full">
                     <!--<img src="images/me.jpeg" class="placeholder_image" Alt="Placehoder image">-->
