@@ -44,6 +44,7 @@ img {
 #bell_icon {
     width: 25px;
     fill: white;
+    margin: 10px 5px 0 0;
 }
 #bell_icon:hover {
   cursor: pointer;
