@@ -413,6 +413,19 @@ textarea[placeholder] {
   border: none;
 } 
 
+.autocomplete-container {
+  position: absolute;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+}
+.autocomplete-container div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+
 /* Media Queries */
 
 .main_header {

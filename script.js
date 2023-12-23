@@ -240,3 +240,53 @@ const mobileData = {
             alert(`Message successfully sent to: ${user.value}`);
         }
     });
+
+    /* Autocomplete search input field */
+    document.addEventListener('DOMContentLoaded', function () {
+        const userField = document.getElementById('user_field');
+        const messageField = document.getElementById('message_field');
+    
+        // Sample user data
+        const users = [
+            'John Doe',
+            'Jane Smith',
+            'Dumitru Bogdan',
+            'Bob Johnson',
+            'Florin Curta',
+            'Alice Williams',
+            'Alice Freifeld',
+            'Charlie Brown'
+        ];
+    
+        const autocompleteContainer = document.createElement('div');
+        autocompleteContainer.classList.add('autocomplete-container');
+        userField.parentNode.appendChild(autocompleteContainer);
+    
+        function updateList() {
+            const searchTerm = userField.value.toLowerCase();
+            const filteredUsers = users.filter(user => user.toLowerCase().includes(searchTerm));
+    
+            autocompleteContainer.innerHTML = '';
+    
+            filteredUsers.forEach(user => {
+                const listItem = document.createElement('div');
+                listItem.textContent = user;
+    
+                listItem.addEventListener('click', function () {
+                    userField.value = user;
+                    autocompleteContainer.innerHTML = '';
+                });
+    
+                autocompleteContainer.appendChild(listItem);
+            });
+        }
+    
+        userField.addEventListener('input', updateList);
+    
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.autocomplete-container') && !event.target.matches('#user_field')) {
+                autocompleteContainer.innerHTML = '';
+            }
+        });
+    });
+    
