@@ -420,10 +420,12 @@ textarea[placeholder] {
   overflow-y: auto;
   background-color: white;
 }
+
 .autocomplete-container div {
   padding: 5px;
   cursor: pointer;
 }
+
 
 
 /* Media Queries */
