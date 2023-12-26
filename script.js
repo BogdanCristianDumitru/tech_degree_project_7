@@ -244,7 +244,6 @@ const mobileData = {
     // Autocomplete search input field 
 document.addEventListener('DOMContentLoaded', function() {
     const userField = document.getElementById('user_field');
-    const messageField = document.getElementById('message_field');
 
     // User Data
     const users = [
