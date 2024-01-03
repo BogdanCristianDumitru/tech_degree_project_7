@@ -272,12 +272,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const listItem = document.createElement('div');
             listItem.textContent = user;
 
+            autocompleteContainer.appendChild(listItem);
+
             listItem.addEventListener('click', () => {
                 userField.value = user;
                 autocompleteContainer.innerHTML = '';
             });
-
-            autocompleteContainer.appendChild(listItem);
         });
     }
 
