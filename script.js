@@ -289,3 +289,61 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Save Settings 
+  // Function to load settings from local storage
+  function loadSettings() {
+    const emailNotifications = localStorage.getItem('emailNotifications') === 'true';
+    const publicProfile = localStorage.getItem('publicProfile') === 'true';
+    const timezone = localStorage.getItem('timezone');
+
+    // Apply settings to UI
+    document.getElementById('emailToggle').checked = emailNotifications;
+    document.getElementById('publicProfileToggle').checked = publicProfile;
+
+    const timezoneSelect = document.getElementById('timezone');
+    timezoneSelect.value = timezone || '';
+
+    if (!timezone) {
+        const defaultOption = document.createElement('option');
+        defaultOption.value = '';
+        defaultOption.text = 'Select a Timezone';
+        defaultOption.disabled = true;
+        defaultOption.selected = true;
+        timezoneSelect.add(defaultOption);
+      }
+  }
+
+  // Function to save settings to local storage
+  function saveSettings() {
+    const emailNotifications = document.getElementById('emailToggle').checked;
+    const publicProfile = document.getElementById('publicProfileToggle').checked;
+    const timezone = document.getElementById('timezone').value;
+
+    //Save Settings to Local Storage
+    localStorage.setItem('emailNotifications', emailNotifications);
+    localStorage.setItem('publicProfile', publicProfile);
+    localStorage.setItem('timezone', timezone);
+  }
+
+  // Function to clear settings from local storage
+  function clearSettings() {
+    localStorage.removeItem('emailNotifications');
+    localStorage.removeItem('publicProfile');
+    localStorage.removeItem('timezone');
+  }
+
+  // Event listener for the "Save" button
+  document.getElementById('save').addEventListener('click', () => {
+    saveSettings();
+  });
+
+  // Event listener for the "Cancel" button
+  document.getElementById('cancel').addEventListener('click', () => {
+    clearSettings();
+    loadSettings(); // Reset UI to default values
+  });
+
+  // Load settings on page load
+  loadSettings();
+
