@@ -29,6 +29,9 @@ h1 {
     margin-left: 10px;
     font-size: 13px;;
 }
+.smaller {
+  font-size: 10px;
+}
 img {
     border-radius: 50%;
     height: 60px;
@@ -175,8 +178,13 @@ nav {
     background-color: #E9EDED;
   }
   .social_container svg {
-  width: 40px;
-  margin-left: 30px;
+    margin-left: 30px;
+}
+.social_picture {
+  fill: #fff;
+}
+.social_circle {
+  fill: #6261BD;;
 }
 .social_text {
   margin-left: 20px;
