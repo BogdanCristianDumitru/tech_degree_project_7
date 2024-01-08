@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('publicProfileToggle').checked = publicProfile;
 
     const timezoneSelect = document.getElementById('timezone');
-    timezoneSelect.value = timezone || '';
+    timezoneSelect.value = timezone || ''; 
 
     if (!timezone) {
         const defaultOption = document.createElement('option');

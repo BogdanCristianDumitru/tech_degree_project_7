@@ -3,16 +3,18 @@
 }
 body {
   background: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Poppins', sans-serif;
 }
 a {
   text-decoration: none;
 }
 /*Main Header*/
 .main_header {
-    background-color: #6261BD;
-    padding: 15px;
+    background-color: rgba(98, 97, 189, .9);  
+    padding: 10px;
 }
 .main_header {
     display: flex;
@@ -21,24 +23,33 @@ a {
 }
 h1 {
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     margin-right: auto;
 }
 .main_header p {
     color: white;
     margin-left: 10px;
-    font-size: 13px;;
+    font-size: 14px;;
 }
 .smaller {
-  font-size: 10px;
+  font-size: 8px;
+  font-weight: 500;
+}
+.main_header img {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+}
+#special_font {
+  font-family: 'Encode Sans', sans-serif;
 }
 img {
     border-radius: 50%;
-    height: 60px;
-    width: 60px;
+    height: 70px;
+    width: 70px;
 }
 #vertical_bar {
-    border-left: 2px solid #ADBABD;
+    border-left: 1px solid rgba(207, 199, 181, .3); 
     height: 50px; 
     margin: 0 10px 0 10px;
 }
@@ -68,7 +79,7 @@ nav {
     display: flex;
     justify-content: center;
     background-color: #3C4467;
-    padding: 15px; 
+    padding: 12px 15px; 
   }
   a {
     margin: 0 15px; 
@@ -98,15 +109,17 @@ nav {
     box-shadow: 0 0 1px;
  }
  .headline {
-    margin: 15px 15px 0 15px;
+    margin: 20px 15px 0 15px;
+    font-size: 20px;
  }
  .alert_banner {
   display: flex;
   justify-content: space-between;
-  background-color: #6261BD;
+  align-items: center;
+  background-color: rgba(98, 97, 189, .9); 
   color: #fff;
   margin: 20px auto 0;
-  width: 95%;
+  width: 90%;
   border-radius: 5px;
  }
  .alert_banner p {
@@ -114,6 +127,7 @@ nav {
  }
  .alert_banner p:first-child {
   padding-left: 15px;
+  font-size: 14px;
  }
  .alert_banner_close {
   padding-right: 15px;
@@ -133,6 +147,7 @@ nav {
     align-self: flex-start; 
     margin-left: 20px;
     text-transform: uppercase;
+    font-size: 17px;
   }
   .daily h3,
   .mobile_users h3,
@@ -143,16 +158,26 @@ nav {
   .settings h3 {
     margin-left: 20px;
     text-transform: uppercase;
+    font-size: 17px;
   }
   .traffic_nav {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
+    margin-top: 10px;
   }
   .traffic_nav_link {
     padding-right: 15px;
-    font-size: 18px;
+  }
+  .traffic_nav button {
+    font-size: 16px;
+  }
+  .traffic_nav .traffic_nav_link:first-child {
+    padding-left: 10px;
+  }
+  .traffic_nav .traffic_nav_link:last-child {
+    padding-right: 10px;
   }
   h3 {
     margin-bottom: 0;
@@ -164,9 +189,12 @@ nav {
     width: 90%;
     height: 90%;
   }
-  .widget_container_full,
   .widget_container_half {
     margin: 30px auto 25px; 
+    width: 95vw;
+  }
+  .widget_container_full {
+    margin: 10px auto 25px; 
     width: 95vw;
   }
   .social_container {
@@ -176,6 +204,8 @@ nav {
     width: 90%;
     margin: 20px auto 20px auto;
     background-color: #E9EDED;
+    border: 1px solid #BCC8C8;
+    box-shadow: 0 0 1px;
   }
   .social_container svg {
     margin-left: 30px;
@@ -184,14 +214,21 @@ nav {
   fill: #fff;
 }
 .social_circle {
-  fill: #6261BD;;
+  fill: rgba(98, 97, 189, .9); 
 }
 .social_text {
   margin-left: 20px;
 }
-
-/*I need to fix the vertical spacing between the two p inside the .social_text*/
-
+.social_container .social_text p:first-child {
+  color: #6261BD;
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+.social_container .social_text p:last-child {
+  font-size: 40px;
+  margin: 0 0 10px 0;
+  color: #696663;
+}
 .members_container {
   display: flex;
   flex-direction: column;
@@ -209,9 +246,13 @@ nav {
 
 .members_text p,
 .members_text a {
+    font-size: 14px;
     margin: 1px; 
     text-align: center;
     padding: 0 30px 0;
+}
+.bolder_font {
+  font-family: 'Roboto', sans-serif;
 }
 
 .members_container p {
@@ -250,7 +291,7 @@ nav {
   width: 90%;
   margin: 15px 0 8px;
   height: 55px;
-  background-color: #6261BD;
+  background-color: rgba(98, 97, 189, .9);
   color: #fff;
   text-transform: uppercase;
   border: 1px solid #BCC8C8; 
@@ -261,10 +302,12 @@ nav {
 input[placeholder] {
   font-size: 16px;
   padding-left: 10px;
+  opacity: .6;
 }
 textarea[placeholder] {
   font-size: 16px;
-  padding: 10px 0 0 10px; 
+  padding: 10px 0 0 10px;
+  opacity: .6; 
 }
 
 .select_form {
@@ -289,7 +332,7 @@ textarea[placeholder] {
   color: #fff;
 }
 .btn_save {
-  background-color: #6261BD;
+  background-color: rgba(98, 97, 189, .9);
 }
 .btn_cancel {
   background-color: #9CA8AB;
@@ -327,8 +370,8 @@ textarea[placeholder] {
   width: 110px;
   height: 45px;
   border-radius: 25px;
-  border: 2px solid #A5B6B6;
-  background: #6261BD;
+  border: 2px solid rgba(165, 182, 182);
+  background: rgba(98, 97, 189, .9);
   outline: none;
 }
 .switch input::before,
@@ -353,8 +396,8 @@ textarea[placeholder] {
   position: absolute;
   top: 10px;
   bottom: -1px;
-  left: 12px;
-  right: 77px;
+  left: 10px;
+  right: 78px;
   border-radius: 50px;
   border: 2px solid #A5B6B6;
   background-color: #fff;
@@ -362,7 +405,7 @@ textarea[placeholder] {
 }
 .switch input:checked+label {
   right: 13px;
-  left: 75px;
+  left: 74px;
   top: 9px;
   bottom: -1px;
   transition: left 0.4s, right 0.2s;
@@ -434,8 +477,6 @@ textarea[placeholder] {
   cursor: pointer;
 }
 
-
-
 /* Media Queries */
 
 .main_header {
@@ -491,6 +532,7 @@ main {
     position: relative;
     width: 90vw;
     height: 40vh;
+    padding-left: 10px;
   }
   .widget_container_half {
     position: relative;
@@ -498,7 +540,9 @@ main {
     height: 25vh;
     padding: 0 15px 0;
   }
-
+  .alert_banner {
+    width: 95%;
+  }
   .flex_social {
     display: flex;
     flex-direction: row;
@@ -510,6 +554,9 @@ main {
     margin: 0 5px 0;
     border: 1px solid lightgray;
     border-radius: 5px;;
+  }
+  .social_container .social_text p:last-child {
+    font-size: 35px;
   }
 
   .members_container {
@@ -528,12 +575,19 @@ main {
     padding-left: 10px;
     text-align: justify;
   }
-
   .members_container {
     border-bottom: 1px solid lightgrey;
     width: 95%;
     margin: auto;
   }
+  .members .members_container:last-child,
+  .recent_activity .members_container:last-child {
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+    padding: 0 19px 0 19px;
+    margin: auto;
+  }
+  
   .recent_activity .members_container .members_text {
     margin-top: 20px;
   }
@@ -552,6 +606,7 @@ main {
   border-bottom: 1px solid lightgray;
   width: 90%;
 }
+
 .message_container {
   width: 95%;
   margin: 0 auto 10px;
@@ -573,7 +628,9 @@ main {
 #second_span {
   margin-left: 62px;
 }
-
+#toggleSecondText {
+  margin-right: 7px;
+}
 .select_form,
 .btns_settings {
   width: 95%;
@@ -623,6 +680,9 @@ main {
   }
   .message h3 {
     padding-bottom: 15px;
+  }
+  #message_field {
+    height: 164px;
   }
  .textarea_field {
   height: 150px;
