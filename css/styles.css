@@ -59,9 +59,12 @@ img {
     width: 25px;
     fill: white;
     margin: 10px 5px 0 0;
+    transition: fill .5s, width .5s;
 }
 #bell_icon:hover {
   cursor: pointer;
+  fill: #FFA500;
+  width: 26px;
 }
 .notification {
   background-color: lightgreen;
@@ -71,7 +74,7 @@ img {
   position: relative;
   left: 20px;
   bottom: 40px;
-  
+  transition: width .5s, height .5s;
 }
 
 /* Navigation*/
@@ -475,6 +478,17 @@ textarea[placeholder] {
 .autocomplete-container div {
   padding: 5px;
   cursor: pointer;
+}
+
+.custom-dropdown select {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #F4F6F6;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.5;  /* Apply opacity to the entire dropdown */
 }
 
 /* Media Queries */

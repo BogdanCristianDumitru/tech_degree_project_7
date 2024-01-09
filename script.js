@@ -302,16 +302,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('publicProfileToggle').checked = publicProfile;
 
     const timezoneSelect = document.getElementById('timezone');
-    timezoneSelect.value = timezone || ''; 
+    timezoneSelect.value = timezone; // Set stored value if available
 
+    // If no timezone is stored, manually set the default option
     if (!timezone) {
-        const defaultOption = document.createElement('option');
-        defaultOption.value = '';
-        defaultOption.text = 'Select a Timezone';
-        defaultOption.disabled = true;
-        defaultOption.selected = true;
-        timezoneSelect.add(defaultOption);
-      }
+      const defaultOption = document.createElement('option');
+      defaultOption.text = 'Select Timezone';
+      defaultOption.disabled = true;
+      defaultOption.selected = true;
+      timezoneSelect.add(defaultOption);
+    }
   }
 
   // Function to save settings to local storage
