@@ -5,7 +5,6 @@ body {
   background: #fff;
   max-width: 1200px;
   margin: 0 auto;
-  /*font-family: 'Roboto', sans-serif;*/
   font-family: 'Poppins', sans-serif;
 }
 a {
@@ -403,15 +402,17 @@ textarea[placeholder] {
   right: 78px;
   border-radius: 50px;
   border: 2px solid #A5B6B6;
-  background-color: #fff;
+  background-color:  #006400;
   transition: left 0.2s, right 0.4s;
 }
 .switch input:checked+label {
-  right: 13px;
-  left: 74px;
+  right: 12px;
+  left: 75px;
   top: 9px;
   bottom: -1px;
+  background-color: #D4480C;
   transition: left 0.4s, right 0.2s;
+
 }
 .settings .toggle_switch:nth-child(2) {
   margin-bottom: 25px;
@@ -422,7 +423,6 @@ textarea[placeholder] {
 .settings h3:nth-child(1) {
   margin-bottom: 20px;
 }
-
 .traffic::after,
 .daily::after,
 .mobile_users::after,
@@ -435,7 +435,6 @@ textarea[placeholder] {
   border-bottom: 1px solid lightgray;
   width: 100%;
 }
-
 .members_container::after {
   content: "";
   display: block;
@@ -601,11 +600,9 @@ main {
     padding: 0 19px 0 19px;
     margin: auto;
   }
-  
   .recent_activity .members_container .members_text {
     margin-top: 20px;
   }
-
 .members .members_container:last-child::after,
 .recent_activity .members_container:last-child::after {
   content: "";
@@ -613,14 +610,12 @@ main {
   border-bottom: 1px solid lightgray;
   width: 100%;
 }
-
 .members_container::after {
   content: "";
   display: none;
   border-bottom: 1px solid lightgray;
   width: 90%;
 }
-
 .message_container {
   width: 95%;
   margin: 0 auto 10px;
@@ -654,7 +649,6 @@ main {
   flex-grow: 1;
   font-size: 16px;
   text-transform: uppercase;
-  
 } 
 .btn_send {
   font-size: 16px;
