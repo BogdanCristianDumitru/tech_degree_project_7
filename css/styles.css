@@ -423,6 +423,7 @@ textarea[placeholder] {
 .settings h3:nth-child(1) {
   margin-bottom: 20px;
 }
+
 .traffic::after,
 .daily::after,
 .mobile_users::after,
@@ -587,7 +588,7 @@ main {
     align-self: flex-start;
     padding-left: 10px;
     text-align: justify;
-  }
+  }  
   .members_container {
     border-bottom: 1px solid lightgrey;
     width: 95%;
