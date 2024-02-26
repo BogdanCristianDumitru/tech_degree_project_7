@@ -508,6 +508,7 @@ main {
 @media (min-width: 768px) {
   .grid_container {
     display: grid;
+    justify-content: center;
     grid-template-columns: 75px 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
