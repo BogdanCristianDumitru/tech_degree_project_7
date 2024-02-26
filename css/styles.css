@@ -444,12 +444,10 @@ textarea[placeholder] {
 }
 
 .widget_container_full {
-  max-width: 1200px;
   position: relative;
   height: 20vh;
 }
 .widget_container_half {
-  /*max-width: 1200px;*/
   position: relative;
   height: 20vh;
 }
